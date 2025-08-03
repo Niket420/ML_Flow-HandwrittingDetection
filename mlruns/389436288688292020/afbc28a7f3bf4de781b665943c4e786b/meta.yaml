@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/389436288688292020/afbc28a7f3bf4de781b665943c4e786b/artifacts
+end_time: 1754061838899
+entry_point_name: ''
+experiment_id: '389436288688292020'
+lifecycle_stage: active
+run_id: afbc28a7f3bf4de781b665943c4e786b
+run_name: salty-sponge-652
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1754061835501
+status: 3
+tags: []
+user_id: niketanand
