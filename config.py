@@ -1,6 +1,6 @@
 CONFIG = {
     "data" : {
             "base_path":"/Users/niketanand/Documents/MLOps/5_MLflow/data",
-            'epoch': 0,}
+            'epoch': 5,}
 
 }

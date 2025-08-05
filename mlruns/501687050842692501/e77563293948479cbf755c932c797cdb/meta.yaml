@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/501687050842692501/e77563293948479cbf755c932c797cdb/artifacts
+end_time: 1754420271912
+entry_point_name: ''
+experiment_id: '501687050842692501'
+lifecycle_stage: active
+run_id: e77563293948479cbf755c932c797cdb
+run_name: selective-lamb-199
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1754420257395
+status: 4
+tags: []
+user_id: niketanand

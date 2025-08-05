@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/501687050842692501/300104d195c5449e936dc6306b14a4a4/artifacts
+end_time: 1754423263491
+entry_point_name: ''
+experiment_id: '501687050842692501'
+lifecycle_stage: active
+run_id: 300104d195c5449e936dc6306b14a4a4
+run_name: gifted-vole-401
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1754423241309
+status: 3
+tags: []
+user_id: niketanand

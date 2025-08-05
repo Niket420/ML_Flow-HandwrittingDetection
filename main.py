@@ -10,7 +10,7 @@ import mlflow
 from mlflow.models import infer_signature
 
 mlflow.set_tracking_uri(uri="http://127.0.0.1:8080")
-mlflow.set_experiment("MLflow Quickstart")
+mlflow.set_experiment("MLflow Error Free")
 
 np.random.seed(42)
 keras.utils.set_random_seed(42)
@@ -432,7 +432,7 @@ if __name__ == "__main__":
         
         model.save("final_model.keras")
         
-        mlflow.tensorflow.log_model(
+        mlflow.keras.log_model(
             model=model,
             artifact_path="model",  
             signature=signature, 
