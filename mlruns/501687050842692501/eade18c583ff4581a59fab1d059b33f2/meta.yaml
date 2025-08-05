@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/501687050842692501/eade18c583ff4581a59fab1d059b33f2/artifacts
+end_time: 1754325565778
+entry_point_name: ''
+experiment_id: '501687050842692501'
+lifecycle_stage: active
+run_id: eade18c583ff4581a59fab1d059b33f2
+run_name: youthful-shoat-643
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1754325556628
+status: 4
+tags: []
+user_id: niketanand

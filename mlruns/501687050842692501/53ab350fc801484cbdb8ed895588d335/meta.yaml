@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/501687050842692501/53ab350fc801484cbdb8ed895588d335/artifacts
+end_time: 1754325318209
+entry_point_name: ''
+experiment_id: '501687050842692501'
+lifecycle_stage: active
+run_id: 53ab350fc801484cbdb8ed895588d335
+run_name: valuable-bear-87
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1754325299173
+status: 4
+tags: []
+user_id: niketanand

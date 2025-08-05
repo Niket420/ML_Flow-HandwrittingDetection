@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/501687050842692501/5efcde9841b34c5b9a56b0bfb59531b9/artifacts
+end_time: 1754250878325
+entry_point_name: ''
+experiment_id: '501687050842692501'
+lifecycle_stage: active
+run_id: 5efcde9841b34c5b9a56b0bfb59531b9
+run_name: marvelous-bat-613
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1754250873193
+status: 4
+tags: []
+user_id: niketanand

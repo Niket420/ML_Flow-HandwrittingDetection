@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/501687050842692501/e94a168cc58d4567b44d84775ad37fc2/artifacts
+end_time: 1754331922682
+entry_point_name: ''
+experiment_id: '501687050842692501'
+lifecycle_stage: active
+run_id: e94a168cc58d4567b44d84775ad37fc2
+run_name: rumbling-finch-46
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1754331907870
+status: 4
+tags: []
+user_id: niketanand

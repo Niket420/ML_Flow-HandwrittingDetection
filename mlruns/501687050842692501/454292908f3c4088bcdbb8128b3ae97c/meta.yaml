@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/501687050842692501/454292908f3c4088bcdbb8128b3ae97c/artifacts
+end_time: 1754332201248
+entry_point_name: ''
+experiment_id: '501687050842692501'
+lifecycle_stage: active
+run_id: 454292908f3c4088bcdbb8128b3ae97c
+run_name: loud-wren-150
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1754332184867
+status: 4
+tags: []
+user_id: niketanand

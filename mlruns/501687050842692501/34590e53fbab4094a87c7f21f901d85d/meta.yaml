@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/501687050842692501/34590e53fbab4094a87c7f21f901d85d/artifacts
+end_time: 1754320176896
+entry_point_name: ''
+experiment_id: '501687050842692501'
+lifecycle_stage: active
+run_id: 34590e53fbab4094a87c7f21f901d85d
+run_name: caring-duck-955
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1754319522799
+status: 4
+tags: []
+user_id: niketanand

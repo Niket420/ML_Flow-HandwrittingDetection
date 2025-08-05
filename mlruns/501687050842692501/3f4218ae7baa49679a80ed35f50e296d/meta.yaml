@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/501687050842692501/3f4218ae7baa49679a80ed35f50e296d/artifacts
+end_time: 1754331758701
+entry_point_name: ''
+experiment_id: '501687050842692501'
+lifecycle_stage: active
+run_id: 3f4218ae7baa49679a80ed35f50e296d
+run_name: puzzled-ant-908
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1754331719183
+status: 4
+tags: []
+user_id: niketanand

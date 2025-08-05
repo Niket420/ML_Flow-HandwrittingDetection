@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/501687050842692501/6c663bafc91a40929394cdeefc8f8353/artifacts
+end_time: 1754328023615
+entry_point_name: ''
+experiment_id: '501687050842692501'
+lifecycle_stage: active
+run_id: 6c663bafc91a40929394cdeefc8f8353
+run_name: resilient-grouse-568
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1754328008872
+status: 4
+tags: []
+user_id: niketanand

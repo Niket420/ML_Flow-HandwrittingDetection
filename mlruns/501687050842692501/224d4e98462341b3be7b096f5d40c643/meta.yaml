@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/501687050842692501/224d4e98462341b3be7b096f5d40c643/artifacts
+end_time: 1754331635501
+entry_point_name: ''
+experiment_id: '501687050842692501'
+lifecycle_stage: active
+run_id: 224d4e98462341b3be7b096f5d40c643
+run_name: magnificent-fowl-537
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1754331621916
+status: 4
+tags: []
+user_id: niketanand

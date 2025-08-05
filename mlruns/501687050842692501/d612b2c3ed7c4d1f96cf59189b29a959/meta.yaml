@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/501687050842692501/d612b2c3ed7c4d1f96cf59189b29a959/artifacts
+end_time: 1754325548408
+entry_point_name: ''
+experiment_id: '501687050842692501'
+lifecycle_stage: active
+run_id: d612b2c3ed7c4d1f96cf59189b29a959
+run_name: sedate-yak-403
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1754325342983
+status: 4
+tags: []
+user_id: niketanand

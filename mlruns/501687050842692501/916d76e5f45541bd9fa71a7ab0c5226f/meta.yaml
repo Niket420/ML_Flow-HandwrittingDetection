@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/501687050842692501/916d76e5f45541bd9fa71a7ab0c5226f/artifacts
+end_time: 1754252783178
+entry_point_name: ''
+experiment_id: '501687050842692501'
+lifecycle_stage: active
+run_id: 916d76e5f45541bd9fa71a7ab0c5226f
+run_name: gaudy-ram-494
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1754251121902
+status: 4
+tags: []
+user_id: niketanand

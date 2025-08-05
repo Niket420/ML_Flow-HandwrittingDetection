@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/501687050842692501/c1dd0a85dddd484aa869de83ecc7caaf/artifacts
+end_time: 1754332785779
+entry_point_name: ''
+experiment_id: '501687050842692501'
+lifecycle_stage: active
+run_id: c1dd0a85dddd484aa869de83ecc7caaf
+run_name: zealous-conch-935
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1754332771449
+status: 4
+tags: []
+user_id: niketanand

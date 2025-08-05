@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/501687050842692501/857be146ef0c4afe9a8b105879b587e3/artifacts
+end_time: 1754326469162
+entry_point_name: ''
+experiment_id: '501687050842692501'
+lifecycle_stage: active
+run_id: 857be146ef0c4afe9a8b105879b587e3
+run_name: exultant-swan-355
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1754326461109
+status: 4
+tags: []
+user_id: niketanand

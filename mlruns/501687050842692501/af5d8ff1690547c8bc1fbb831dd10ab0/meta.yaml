@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/501687050842692501/af5d8ff1690547c8bc1fbb831dd10ab0/artifacts
+end_time: 1754310200514
+entry_point_name: ''
+experiment_id: '501687050842692501'
+lifecycle_stage: active
+run_id: af5d8ff1690547c8bc1fbb831dd10ab0
+run_name: clumsy-fawn-736
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1754308521598
+status: 4
+tags: []
+user_id: niketanand

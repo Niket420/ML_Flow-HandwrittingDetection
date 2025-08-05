@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/501687050842692501/bd8c03975c3343068af5ac66c7eb7f1e/artifacts
+end_time: 1754332830903
+entry_point_name: ''
+experiment_id: '501687050842692501'
+lifecycle_stage: active
+run_id: bd8c03975c3343068af5ac66c7eb7f1e
+run_name: funny-ram-74
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1754332820071
+status: 4
+tags: []
+user_id: niketanand

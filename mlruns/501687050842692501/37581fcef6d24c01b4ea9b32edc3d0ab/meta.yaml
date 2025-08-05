@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/501687050842692501/37581fcef6d24c01b4ea9b32edc3d0ab/artifacts
+end_time: 1754325253148
+entry_point_name: ''
+experiment_id: '501687050842692501'
+lifecycle_stage: active
+run_id: 37581fcef6d24c01b4ea9b32edc3d0ab
+run_name: legendary-yak-905
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1754324870790
+status: 4
+tags: []
+user_id: niketanand

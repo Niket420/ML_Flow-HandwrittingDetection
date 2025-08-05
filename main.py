@@ -354,80 +354,91 @@ if __name__ == "__main__":
         validation_ds = prepare_dataset(validation_img_paths, validation_labels_cleaned)
         test_ds = prepare_dataset(test_img_paths, test_labels_cleaned)
 
-        with mlflow.start_run():
+       
 
-            for data in train_ds.take(1):
-                images, labels = data["image"], data["label"]
+        for data in train_ds.take(1):
+            images, labels = data["image"], data["label"]
 
-            _, ax = plt.subplots(4, 4, figsize=(15, 8))
+        _, ax = plt.subplots(4, 4, figsize=(15, 8))
 
-            for i in range(16):
-                img = images[i]
-                img = tf.image.flip_left_right(img)
-                img = ops.transpose(img, (1, 0, 2))
-                img = (img * 255.0).numpy().clip(0, 255).astype(np.uint8)
-                img = img[:, :, 0]
+        for i in range(16):
+            img = images[i]
+            img = tf.image.flip_left_right(img)
+            img = ops.transpose(img, (1, 0, 2))
+            img = (img * 255.0).numpy().clip(0, 255).astype(np.uint8)
+            img = img[:, :, 0]
 
-                # Gather indices where label!= padding_token.
-                label = labels[i]
-                indices = tf.gather(label, tf.where(tf.math.not_equal(label, padding_token)))
-                # Convert to string.
-                label = tf.strings.reduce_join(num_to_char(indices))
-                label = label.numpy().decode("utf-8")
+            # Gather indices where label!= padding_token.
+            label = labels[i]
+            indices = tf.gather(label, tf.where(tf.math.not_equal(label, padding_token)))
+            # Convert to string.
+            label = tf.strings.reduce_join(num_to_char(indices))
+            label = label.numpy().decode("utf-8")
 
-                ax[i // 4, i % 4].imshow(img, cmap="gray")
-                ax[i // 4, i % 4].set_title(label)
-                ax[i // 4, i % 4].axis("off")
+            ax[i // 4, i % 4].imshow(img, cmap="gray")
+            ax[i // 4, i % 4].set_title(label)
+            ax[i // 4, i % 4].axis("off")
 
-            plt.show()
+        plt.show()
 
 
+    
         
-            
 
-            validation_images = []
-            validation_labels = []
+        validation_images = []
+        validation_labels = []
 
-            for batch in validation_ds:
-                validation_images.append(batch["image"])
-                validation_labels.append(batch["label"])
+        for batch in validation_ds:
+            validation_images.append(batch["image"])
+            validation_labels.append(batch["label"])
 
 
-            epochs = CONFIG['data']['epoch'] 
+        epochs = CONFIG['data']['epoch'] 
 
-            mlflow.log_param("batch_size", batch_size)
-            mlflow.log_param("epochs", epochs)
-            mlflow.log_param("image_width", image_width)
-            mlflow.log_param("image_height", image_height)
-            mlflow.log_param("vocab_size", len(char_to_num.get_vocabulary()))
- 
-            model = build_model()
-            model.summary()
-            prediction_model = keras.models.Model(
-                model.get_layer(name="image").output, model.get_layer(name="dense2").output
+        mlflow.log_param("batch_size", batch_size)
+        mlflow.log_param("epochs", epochs)
+        mlflow.log_param("image_width", image_width)
+        mlflow.log_param("image_height", image_height)
+        mlflow.log_param("vocab_size", len(char_to_num.get_vocabulary()))
+
+        model = build_model()
+        model.summary()
+        prediction_model = keras.models.Model(
+            model.get_layer(name="image").output, model.get_layer(name="dense2").output
+        )
+        edit_distance_callback = EditDistanceCallback(prediction_model)
+
+        with open("model_summary.txt","w") as f:
+            model.summary(print_fn=lambda x: f.write(x + "\n"))
+        
+        mlflow.log_artifact("model_summary.txt")
+        # Train the model.
+        history = model.fit(
+            train_ds,
+            validation_data=validation_ds,
+            epochs=epochs,
+            callbacks=[edit_distance_callback],
             )
-            edit_distance_callback = EditDistanceCallback(prediction_model)
+        
+        for epoch in range(epochs):
+            mlflow.log_metric("train_loss", history.history["loss"][epoch], step=epoch)
+            mlflow.log_metric("val_loss", history.history["val_loss"][epoch], step=epoch)
 
-            with open("model_summary.txt","w") as f:
-                model.summary(print_fn=lambda x: f.write(x + "\n"))
-            
-            mlflow.log_artifacts("model_summary.txt")
-            # Train the model.
-            history = model.fit(
-                train_ds,
-                validation_data=validation_ds,
-                epochs=epochs,
-                callbacks=[edit_distance_callback],
-                )
-            for epoch in range(epochs):
-                mlflow.log_metric("train_loss", history.history["loss"][epoch], step=epoch)
-                mlflow.log_metric("val_loss", history.history["val_loss"][epoch], step=epoch)
-            
-            model.save("final_model")
-            mlflow.tensorflow.log_model(tf_saved_model_dir="saved_model", artifact_path="model")
 
-            plt.savefig("predictions.png")
-            mlflow.log_artifact("predictions.png")
+        sample_input = next(iter(test_ds))["image"].numpy()
+        sample_output = model.predict(test_ds)
+        signature = infer_signature(sample_input, sample_output)
+       
+        
+        model.save("final_model.keras")
+        
+        mlflow.tensorflow.log_model(
+            model=model,
+            artifact_path="model",  
+            signature=signature, 
+)
+        plt.savefig("predictions.png")
+        mlflow.log_artifact("predictions.png")
 
 
 
